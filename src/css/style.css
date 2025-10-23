@@ -19,7 +19,7 @@ body {
 }
 
 /* ================================
-   🖋️ FONTS
+   FONTS
 ================================== */
 @font-face {
   font-family: "Playfair";
@@ -38,7 +38,7 @@ body {
 }
 
 /* ================================
-   🎨 VARIABLES
+   VARIABLES
 ================================== */
 :root {
   /* COLORS */
@@ -48,6 +48,7 @@ body {
   --neutral: rgba(0, 0, 0, 0.1);
 
   /* TEXT & BG */
+  --text-color: #fff6e6;
   --text-primary: #2d4739;
   --text-secondary: #555555;
   --bg-color: #fff6e6;
@@ -58,7 +59,7 @@ body {
 }
 
 /* ================================
-   🔠 TYPE SCALE
+   TYPE SCALE
 ================================== */
 h1 {
   font-size: 4rem;
@@ -80,6 +81,7 @@ h3 {
   line-height: 1.4;
   letter-spacing: 0.5px;
   margin-bottom: 1rem;
+  font-weight: bold;
 }
 
 p {
@@ -90,7 +92,7 @@ p {
 }
 
 /* ================================
-   📦 CONTAINER
+   CONTAINER
 ================================== */
 .container {
   width: 95%;
@@ -100,5 +102,221 @@ p {
 }
 
 /* ================================
-   📱 MEDIA QUERIES
+   HEADER SECTION
 ================================== */
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  display: flex;
+  justify-content: space-between; /* statt space-around */
+  align-items: center;
+  padding: 0.5rem 1rem;
+  background-color: var(--secondary);
+  width: 100%;
+}
+
+/* Logo */
+.header .header-title .logo {
+  font-size: 1.25rem;
+  text-decoration: none;
+  color: var(--text-color);
+  margin-left: 3rem;
+}
+
+/* Burger */
+.header .icon-burger {
+  cursor: pointer;
+  z-index: 11;
+  position: relative; /* bleibt Teil des Flex-Headers */
+  width: 38px;
+  height: 38px;
+  margin-right: 3rem;
+}
+
+/* Menü standardmäßig verstecken */
+.header .header-nav {
+  display: none;
+}
+
+/* Menü geöffnet */
+.header .header-nav.is-open {
+  display: block;
+  position: absolute;
+  top: 100%; /* direkt unter dem Header */
+  right: 1rem; /* an der rechten Seite, unter dem Burger */
+  width: 120px; /* feste Breite */
+  background-color: var(--secondary);
+  text-align: center;
+  border-radius: 0 0 4px 4px;
+  z-index: 9;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+/* Menüelemente */
+.header .header-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.header .header-nav ul li {
+  margin: 0.75rem 1rem;
+}
+
+.header .header-nav ul li a {
+  text-decoration: none;
+  color: var(--text-color);
+  font-size: 0.875rem;
+  display: block;
+  text-underline-offset: 3px;
+}
+.header .header-nav ul li a:hover {
+  text-decoration: underline;
+}
+
+/* ================================
+   HERO SECTION
+================================== */
+.hero-container {
+  min-height: 30vh;
+  background: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)),
+    url("/src/assets/images/picture/hero-picture.webp") center/cover no-repeat;
+  color: var(--text-color);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.hero-headline h1 {
+  font-size: 1.75rem;
+}
+.slogan-container {
+  text-align: center;
+}
+.slogan-container h2 {
+  font-size: 1rem;
+}
+.slogan-container p {
+  font-size: 0.75rem;
+}
+.btn-default {
+  text-align: center;
+}
+.btn-container button {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  background-color: var(--primary);
+  color: var(--text-color);
+  border: none;
+  border-radius: 1rem;
+}
+.btn-container button:hover {
+  background-color: var(--secondary);
+  cursor: pointer;
+  transition: background-color 0.5s ease, transform 0.2s ease;
+}
+
+/* ================================
+   MEDIA QUERIES
+================================== */
+@media (min-width: 768px) {
+  .header {
+    padding: 1rem 1.25rem;
+  }
+  .header .header-title .logo {
+    font-size: 2rem;
+    margin-left: 1.5rem;
+  }
+  .header .icon-burger {
+    width: 50px;
+    height: 50px;
+    margin-right: 1.5rem;
+  }
+  .header .header-nav ul li {
+    margin: 1rem 0 1rem 0;
+  }
+  .header .header-nav ul li a {
+    font-size: 1rem;
+  }
+  .hero-container {
+    min-height: 50vh;
+  }
+  .hero-headline h1 {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .slogan-container h2 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .slogan-container p {
+    font-size: 1.25rem;
+  }
+  .btn-container button {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+
+    margin: 2rem 0;
+  }
+}
+@media (min-width: 1024px) {
+  .header {
+    padding: 1.25rem 3rem;
+  }
+  .header .header-title .logo {
+    margin: 0;
+  }
+  .header .icon-burger {
+    display: none;
+  }
+  .header .header-nav {
+    display: flex;
+  }
+  .header .header-nav ul {
+    display: flex;
+    gap: 1.5rem;
+  }
+  .header .header-nav ul li a {
+    font-size: 1.5rem;
+  }
+  .hero-container {
+    min-height: 50vh;
+  }
+  .hero-headline h1 {
+    font-size: 4rem;
+    margin-bottom: 3rem;
+  }
+  .slogan-container h2 {
+    font-size: 2.75rem;
+    margin-bottom: 0.5rem;
+  }
+  .slogan-container p {
+    font-size: 1.75rem;
+    margin-bottom: 2rem;
+  }
+}
+@media (min-width: 1200px) {
+  .header .header-nav ul {
+    gap: 2.5rem;
+  }
+  .hero-container {
+    min-height: 100vh;
+  }
+  .hero-headline h1 {
+    font-size: 4rem;
+    margin-bottom: 2rem;
+  }
+  .slogan-container h2 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+  }
+  .slogan-container p {
+    font-size: 1.75rem;
+  }
+  .btn-container button {
+    padding: 1rem 1.5rem;
+    font-size: 1.25rem;
+    margin-bottom: 10rem;
+  }
+}

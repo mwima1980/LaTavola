@@ -7,7 +7,7 @@
       name="description"
       content="Dr. Max Mustermann – Fachanwalt für Strafrecht mit langjähriger Erfahrung in Strafverteidigung."
     />
-    <link rel="stylesheet" href="/src/css/output.css" />
+    <link rel="stylesheet" href="/src/css/style.css" />
     <link
       rel="shortcut icon"
       href="/src/assets/images/icons/waage_fav.png"
@@ -15,5 +15,47 @@
     />
     <title>La Tavola</title>
   </head>
-  <body></body>
+  <body>
+    <!-- HEADER - SECTION -->
+    <header class="header">
+      <div class="header-title">
+        <a href="#" class="logo">La Tavola</a>
+      </div>
+      <!-- BURGER - NAVIGATION -->
+      <img
+        src="/src/assets/images/icons/burger-menu.svg"
+        alt="Menü öffnen"
+        class="icon-burger"
+        role="button"
+        tabindex="0"
+        aria-controls="mainmenu"
+        aria-expanded="false"
+      />
+      <!-- HEADER - NAVIGATION -->
+      <nav class="header-nav" id="mainmenu" aria-label="Hauptnavigation">
+        <ul>
+          <li><a href="#start">Start</a></li>
+          <li><a href="#about-us">Über uns</a></li>
+          <li><a href="#menu-card">Speisekarte</a></li>
+          <li><a href="#gallery">Galerie</a></li>
+          <li><a href="#reservation">Reservierung</a></li>
+          <li><a href="#contact">Kontakt</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- HERO - SECTION -->
+    <section class="hero-container">
+      <div class="hero-headline">
+        <h1>La Tavola</h1>
+      </div>
+      <div class="slogan-container">
+        <h2>Cucina Italiana</h2>
+        <p>Italienischer Genuss auf italienisch</p>
+      </div>
+      <div class="btn-container">
+        <button type="submit">Jetzt Tisch reservieren</button>
+      </div>
+    </section>
+    <script src="/src/js/main.js"></script>
+  </body>
 </html>
