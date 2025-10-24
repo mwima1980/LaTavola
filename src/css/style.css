@@ -8,7 +8,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+html {
+  scroll-behavior: smooth;
+}
 body {
   font-family: "OpenSans", system-ui, sans-serif;
   font-size: 1.125rem;
@@ -285,6 +287,9 @@ p {
   height: 300px;
   border-radius: 12px 12px 0 0;
 }
+.card-menu img:hover {
+  transform: scale(1.05);
+}
 .card-menu .text-menu-container {
   padding: 1rem;
 }
@@ -300,9 +305,48 @@ p {
   font-weight: bold;
   margin-top: 0.25rem;
 }
+
+/* ================================
+   GALLERY SECTION
+================================== */
+.gallery-container {
+  background-color: #ffffff;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+#gallery-title {
+  text-align: center;
+  font-size: 1.25rem;
+  margin: 1rem 0 2rem 0;
+}
+.card-container {
+  display: grid;
+  gap: 2rem;
+}
+.card-container .card-gallery {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.card-gallery {
+  list-style: none;
+}
+.card-gallery img {
+  width: 100%;
+  height: 300px;
+}
+.card-gallery img:hover {
+  transform: scale(1.05);
+}
+
 /* ================================
    MEDIA QUERIES
 ================================== */
+/* ================================
+   HEADER SECTION
+  ================================ */
 @media (min-width: 768px) {
   .header {
     padding: 1rem 1.25rem;
@@ -322,6 +366,12 @@ p {
   .header .header-nav ul li a {
     font-size: 1rem;
   }
+  .card-container {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  /* ================================
+   HERO SECTION
+  ================================ */
   .hero-container {
     min-height: 50vh;
   }
@@ -341,6 +391,10 @@ p {
     font-size: 1.25rem;
     margin: 2rem 0;
   }
+
+  /* ================================
+   ABOUT US SECTION
+  ================================ */
   .main-container .about-us-container {
     padding: 0;
     text-align: center;
@@ -358,8 +412,12 @@ p {
   .picture-container picture img {
     height: 500px;
   }
+
+  /* ================================
+   MENU CARD SECTION
+  ================================ */
   .menu-container .card-container {
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: repeat(2, 1fr);
   }
   #menu-title {
     font-size: 1.75rem;
@@ -370,8 +428,17 @@ p {
   .text-menu-container p {
     font-size: 1rem;
   }
+  /* ================================
+   GALLERY SECTION
+  ============================== */
+  #gallery-title {
+    font-size: 1.75rem;
+  }
 }
 @media (min-width: 1024px) {
+  /* ================================
+   HEADER SECTION
+  ============================== */
   .header {
     padding: 1.25rem 3rem;
   }
@@ -391,6 +458,10 @@ p {
   .header .header-nav ul li a {
     font-size: 1.5rem;
   }
+
+  /* ================================
+   HERO SECTION
+  ================================ */
   .hero-container {
     min-height: 50vh;
   }
@@ -406,6 +477,10 @@ p {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
+
+  /* ================================
+   ABOUT US SECTION
+  ================================ */
   .main-container .about-us-container {
     flex-direction: row;
     gap: 5rem;
@@ -431,9 +506,16 @@ p {
   }
 }
 @media (min-width: 1200px) {
+  /* ================================
+   HEADER SECTION
+  ================================ */
   .header .header-nav ul {
     gap: 2.5rem;
   }
+
+  /* ================================
+   HERO SECTION
+  ================================ */
   .hero-container {
     min-height: 100vh;
   }
@@ -453,6 +535,10 @@ p {
     font-size: 1.25rem;
     margin-bottom: 10rem;
   }
+
+  /* ================================
+   ABOUT US SECTION
+  ================================ */
   .main-container .about-us-container {
     gap: 4rem;
     padding: 2rem 0;
@@ -461,16 +547,38 @@ p {
     width: 400px;
     height: 350px;
   }
+
+  /* ================================
+   MENU CARD SECTION
+  ================================ */
+  .menu-container {
+    padding: 2rem;
+  }
   #menu-title {
     font-size: 3rem;
+    margin-bottom: 2rem;
   }
   .menu-container .card-container {
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(4, 1fr);
   }
   .text-menu-container h3 {
     font-size: 1.375rem;
   }
   .text-menu-container p {
     font-size: 1rem;
+  }
+  /* ================================
+   GALLERY SECTION
+  ================================ */
+  #gallery-title {
+    font-size: 3rem;
+    margin-bottom: 2rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
+    padding: 1.5rem;
+  }
+  .card-container {
+    grid-template-columns: repeat(4, 1fr);
   }
 }

@@ -44,7 +44,7 @@
       </nav>
     </header>
     <!-- HERO - SECTION -->
-    <section class="hero-container">
+    <section class="hero-container" id="start">
       <div class="hero-headline">
         <h1>La Tavola</h1>
       </div>
@@ -57,7 +57,7 @@
       </div>
     </section>
     <!-- ABOUT US - SECTION -->
-    <main class="main-container">
+    <main class="main-container" id="about-us">
       <section class="about-us-container">
         <div class="text-container" aria-labelledby="about-title">
           <h2 id="about-title">Tradition und Leidenschaft</h2>
@@ -84,7 +84,7 @@
       </section>
     </main>
     <!-- MENU - SECTION -->
-    <section class="menu-container" aria-labelledby="menu-title">
+    <section class="menu-container" aria-labelledby="menu-title" id="menu-card">
       <div class="menu-headline">
         <h2 id="menu-title">Speisekarte</h2>
       </div>
@@ -93,6 +93,8 @@
           <img
             src="/src/assets/images/picture/bruscetta-picture.webp"
             alt="Bruschetta"
+            loading="lazy"
+            decoding="async"
           />
           <div class="text-menu-container">
             <h3>Bruscetta</h3>
@@ -104,6 +106,8 @@
           <img
             src="/src/assets/images/picture/spaghetti-carbonara-picture.webp"
             alt="Spaghetti Carbonara"
+            loading="lazy"
+            decoding="async"
           />
           <div class="text-menu-container">
             <h3>Spaghetti Carbonara</h3>
@@ -115,6 +119,8 @@
           <img
             src="/src/assets/images/picture/pizza-margherita-picture.webp"
             alt="Pizza Margherita"
+            loading="lazy"
+            decoding="async"
           />
           <div class="text-menu-container">
             <h3>Pizza Margherita</h3>
@@ -126,12 +132,58 @@
           <img
             src="/src/assets/images/picture/tiramisu-picture.webp"
             alt="Tiramisu"
+            loading="lazy"
+            decoding="async"
           />
           <div class="text-menu-container">
             <h3>Tiramisu</h3>
             <p>Lorem ipsum dolor sit, amet consectetur.</p>
             <p class="price"><data value="8.50">8,50 €</data></p>
           </div>
+        </li>
+      </ul>
+    </section>
+    <!-- GALLERY - SECTION -->
+    <section
+      class="gallery-container"
+      aria-labelledby="gallery-title"
+      id="gallery"
+    >
+      <div class="gallery-headline">
+        <h2 id="gallery-title">Galerie</h2>
+      </div>
+      <ul class="card-container" role="list">
+        <li class="card-gallery">
+          <img
+            src="/src/assets/images/picture/galerie1-picture.webp"
+            alt="Bruschetta"
+            loading="lazy"
+            decoding="async"
+          />
+        </li>
+        <li class="card-gallery">
+          <img
+            src="/src/assets/images/picture/galerie2-picture.webp"
+            alt="Spaghetti Carbonara"
+            loading="lazy"
+            decoding="async"
+          />
+        </li>
+        <li class="card-gallery">
+          <img
+            src="/src/assets/images/picture/galerie3-picture.webp"
+            alt="Pizza Margherita"
+            loading="lazy"
+            decoding="async"
+          />
+        </li>
+        <li class="card-gallery">
+          <img
+            src="/src/assets/images/picture/galerie4-picture.webp"
+            alt="Tiramisu"
+            loading="lazy"
+            decoding="async"
+          />
         </li>
       </ul>
     </section>
