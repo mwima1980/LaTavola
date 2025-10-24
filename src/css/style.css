@@ -257,7 +257,46 @@ p {
 /* ================================
    MENU CARD SECTION
 ================================== */
-
+.menu-container {
+  background-color: #f9f5ef;
+  color: var(--text-primary);
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+  gap: 1rem;
+}
+#menu-title {
+  text-align: center;
+  font-size: 1.25rem;
+}
+.menu-container .card-container {
+  display: grid;
+  gap: 2rem;
+}
+.card-container .card-menu {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+.card-menu img {
+  width: 100%;
+  height: 300px;
+}
+.card-menu .text-menu-container {
+  padding: 1rem;
+}
+.text-menu-container h3 {
+  margin-bottom: 0.5rem;
+  font-size: 1rem;
+}
+.text-menu-container p {
+  margin: 0;
+  font-size: 0.75rem;
+}
+.text-menu-container .price {
+  font-weight: bold;
+  margin-top: 0.25rem;
+}
 /* ================================
    MEDIA QUERIES
 ================================== */
