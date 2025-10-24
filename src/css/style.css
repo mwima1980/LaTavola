@@ -253,6 +253,11 @@ p {
   width: 100%;
   height: 300px;
 }
+
+/* ================================
+   MENU CARD SECTION
+================================== */
+
 /* ================================
    MEDIA QUERIES
 ================================== */
@@ -298,7 +303,6 @@ p {
     padding: 0;
     text-align: center;
   }
-
   .text-container #about-title {
     font-size: 1.75rem;
     margin-bottom: 1.25rem;
@@ -348,6 +352,29 @@ p {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
+  .main-container .about-us-container {
+    flex-direction: row;
+    gap: 5rem;
+    padding: 4rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .text-container {
+    text-align: left;
+  }
+  .text-container #about-title {
+    font-size: 2.25rem;
+  }
+  .text-container p {
+    font-size: 1.25rem;
+  }
+  .text-container .highlight-container {
+    font-size: 1.25rem;
+  }
+  .picture-container picture img {
+    width: 320px;
+    height: 320px;
+  }
 }
 @media (min-width: 1200px) {
   .header .header-nav ul {
@@ -371,5 +398,14 @@ p {
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
     margin-bottom: 10rem;
+  }
+  .main-container .about-us-container {
+    gap: 4rem;
+    padding: 2rem 0;
+  }
+
+  .picture-container picture img {
+    width: 400px;
+    height: 350px;
   }
 }
