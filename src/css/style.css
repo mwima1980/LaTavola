@@ -61,6 +61,24 @@ body {
 }
 
 /* ================================
+  DEFAULT
+================================== */
+.btn-default {
+  padding: 0.5rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 300;
+  background-color: var(--primary);
+  color: var(--text-color);
+  border: none;
+  border-radius: 1rem;
+}
+.reservation-form input,
+textarea {
+  padding: 1rem;
+  width: min(100%, 600px);
+  border: none;
+}
+/* ================================
    TYPE SCALE
 ================================== */
 h1 {
@@ -204,14 +222,13 @@ p {
 .btn-default {
   text-align: center;
 }
-.btn-container button {
+.btn-default a {
+  color: inherit;
   padding: 0.5rem 1rem;
   font-size: 0.75rem;
-  font-weight: 300;
-  background-color: var(--primary);
-  color: var(--text-color);
   border: none;
   border-radius: 1rem;
+  text-decoration: none;
 }
 .btn-container button:hover {
   background-color: var(--secondary);
@@ -342,6 +359,52 @@ p {
 }
 
 /* ================================
+   FORMULAR - SECTION
+================================== */
+.reservation-section {
+  display: flex;
+  flex-direction: column;
+}
+.reservation-form {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem;
+}
+#form-title {
+  text-align: center;
+  margin-top: 1.5rem;
+  font-size: 1.25rem;
+}
+.reservation-form input {
+  resize: none;
+}
+.reservation-form textarea {
+  resize: vertical;
+  overflow: auto;
+}
+.sr-only {
+  position: absolute !important;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap; /* kein Zeilenumbruch */
+  border: 0;
+}
+.btn-container {
+  text-align: center;
+  margin: 0.75rem;
+}
+.btn-container .btn-default {
+  padding: 1rem 1.5rem;
+  font-size: 1.25rem;
+  margin: 2rem 0;
+}
+/* ================================
    MEDIA QUERIES
 ================================== */
 /* ================================
@@ -386,7 +449,7 @@ p {
   .slogan-container p {
     font-size: 1.25rem;
   }
-  .btn-container button {
+  .btn-container .btn-default a {
     padding: 1rem 1.5rem;
     font-size: 1.25rem;
     margin: 2rem 0;
@@ -432,6 +495,16 @@ p {
    GALLERY SECTION
   ============================== */
   #gallery-title {
+    font-size: 1.75rem;
+  }
+  /* ================================
+   FORMULAR SECTION
+  ============================== */
+  #form-title {
+    font-size: 1.75rem;
+  }
+  .reservation-form input,
+  textarea {
     font-size: 1.75rem;
   }
 }
@@ -503,6 +576,19 @@ p {
   .picture-container picture img {
     width: 320px;
     height: 320px;
+  }
+  /* ================================
+   FORMULAR SECTION
+  ============================== */
+  #form-title {
+    font-size: 2.25rem;
+  }
+  .reservation-form input,
+  textarea {
+    font-size: 2.25rem;
+  }
+  .btn-container .btn-default {
+    font-size: 1.75rem;
   }
 }
 @media (min-width: 1200px) {
@@ -580,5 +666,12 @@ p {
   }
   .card-container {
     grid-template-columns: repeat(4, 1fr);
+  }
+  /* ================================
+   FORMULAR SECTION
+  ================================ */
+  .reservation-form input,
+  textarea {
+    width: min(100%, 800px);
   }
 }
