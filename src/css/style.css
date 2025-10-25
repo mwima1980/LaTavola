@@ -224,7 +224,7 @@ p {
 }
 .btn-default a {
   color: inherit;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem;
   font-size: 0.75rem;
   border: none;
   border-radius: 1rem;
@@ -400,7 +400,7 @@ p {
   margin: 0.75rem;
 }
 .btn-container .btn-default {
-  padding: 1rem 1.5rem;
+  padding: 1rem;
   font-size: 1.25rem;
   margin: 2rem 0;
 }
@@ -450,7 +450,7 @@ p {
     font-size: 1.25rem;
   }
   .btn-container .btn-default a {
-    padding: 1rem 1.5rem;
+    padding: 1rem;
     font-size: 1.25rem;
     margin: 2rem 0;
   }
@@ -550,7 +550,10 @@ p {
     font-size: 1.75rem;
     margin-bottom: 2rem;
   }
-
+  .btn-container .btn-default a {
+    padding: 1rem;
+    font-size: 1.75rem;
+  }
   /* ================================
    ABOUT US SECTION
   ================================ */
@@ -589,6 +592,7 @@ p {
   }
   .btn-container .btn-default {
     font-size: 1.75rem;
+    padding: 1.5rem;
   }
 }
 @media (min-width: 1200px) {
@@ -617,9 +621,11 @@ p {
     font-size: 1.75rem;
   }
   .btn-container button {
-    padding: 1rem 1.5rem;
-    font-size: 1.25rem;
     margin-bottom: 10rem;
+  }
+  .btn-container .btn-default a {
+    padding: 1rem;
+    font-size: 2rem;
   }
 
   /* ================================
@@ -673,5 +679,10 @@ p {
   .reservation-form input,
   textarea {
     width: min(100%, 800px);
+  }
+  .btn-container .btn-default {
+    font-size: 2.25rem;
+    padding: 2rem;
+    margin-bottom: 2rem;
   }
 }
