@@ -222,19 +222,30 @@ p {
 .btn-default {
   text-align: center;
 }
-.btn-default a {
+.btn-container a {
   color: inherit;
-  padding: 0.5rem;
-  font-size: 0.75rem;
-  border: none;
-  border-radius: 1rem;
   text-decoration: none;
+  border: 2px solid var(--primary);
+  padding: 0.75rem;
+  background-color: #7b2d26;
+  border-radius: 2rem;
+  font-size: 0.75rem;
+  text-align: center;
 }
-.btn-container button:hover {
+.btn-container a:hover {
   background-color: var(--secondary);
+  border: 2px solid var(--secondary);
   cursor: pointer;
-  transition: background-color 0.5s ease, transform 0.2s ease;
 }
+/* .btn-container {
+  text-align: center;
+  margin: 0.75rem;
+}
+.btn-container .btn-default {
+  padding: 1rem;
+  font-size: 1.25rem;
+  margin: 2rem 0;
+} */
 
 /* ================================
    ABOUT US SECTION
@@ -398,10 +409,11 @@ p {
 .btn-container {
   text-align: center;
   margin: 0.75rem;
+  border-radius: 2rem;
 }
 .btn-container .btn-default {
   padding: 1rem;
-  font-size: 1.25rem;
+  font-size: 0.75rem;
   margin: 2rem 0;
 }
 /* ================================
