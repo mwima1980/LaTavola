@@ -427,6 +427,7 @@ p {
   background-color: var(--secondary);
   color: var(--text-color);
   padding: 1.25rem 0;
+  align-content: start;
 }
 .address {
   display: flex;
@@ -456,7 +457,9 @@ p {
   display: flex;
   flex-direction: column;
   gap: 0.5rem;
+  list-style: none;
 }
+
 .legal > ul > li > a {
   text-decoration: none;
   color: var(--text-color);
@@ -464,13 +467,14 @@ p {
 .footer-nav > ul {
   display: flex;
   flex-direction: column;
+  list-style: none;
   gap: 0.5rem;
 }
 .footer-nav a img {
   width: 30px;
   height: 30px;
 }
-.start a {
+.begin a {
   text-decoration: none;
   color: var(--text-color);
 }
@@ -519,9 +523,12 @@ p {
   .slogan-container p {
     font-size: 1.25rem;
   }
-  .btn-container .btn-default a {
+  .btn-container {
+    margin-top: 2rem;
+  }
+  .btn-container a {
     padding: 1rem;
-    font-size: 1.25rem;
+    font-size: 1rem;
     margin: 2rem 0;
   }
 
@@ -573,9 +580,55 @@ p {
   #form-title {
     font-size: 1.75rem;
   }
-  .reservation-form input,
+  .reservation-form > input,
   textarea {
-    font-size: 1.75rem;
+    font-size: 1.25rem;
+    padding: 1.5rem;
+    margin: 1rem 0;
+  }
+  .btn-container .btn-default {
+    padding: 1.5rem;
+    font-size: 1.25rem;
+    margin: 2rem 0;
+  }
+  /* ================================
+   FOOTER SECTION
+  ============================== */
+  .footer-section {
+    padding: 5rem 0;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "contact opening"
+      "legal   social"
+      "begin   copy";
+  }
+  .footer-section .contact {
+    grid-area: contact;
+  }
+  .footer-section .legal {
+    grid-area: legal;
+  }
+  .footer-section .begin {
+    grid-area: begin;
+  }
+  .footer-section .opening {
+    grid-area: opening;
+  }
+  .footer-section .social {
+    grid-area: social;
+  }
+  .footer-section .copy {
+    grid-area: copy;
+  }
+  .legal > ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
+  }
+  .footer-nav > ul {
+    flex-direction: row;
+    justify-content: center;
+    gap: 1rem;
   }
 }
 @media (min-width: 1024px) {
